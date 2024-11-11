@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Quiz</title>
+    <style>
+        /* Basic styling for layout and centering */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        #quizContainer {
+            max-width: 600px;
+            width: 100%;
+            border: 2px solid #333;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, p {
+            text-align: center;
+        }
+        .question {
+            display: none; /* Hide all questions by default */
+        }
+        button {
+            margin: 10px 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="quizContainer">
+        <h1>Personality Quiz</h1>
+        
+        <form id="quizForm">
+            <!-- Questions -->
+            <div class="question">
+                <p>1. What's your favorite way to spend a weekend?</p>
+                <label><input type="radio" name="q1" value="1"> A. Reading a book</label><br>
+                <label><input type="radio" name="q1" value="2"> B. Painting or crafting</label><br>
+                <label><input type="radio" name="q1" value="3"> C. Watching a movie</label><br>
+                <label><input type="radio" name="q1" value="4"> D. Hiking or adventuring</label>
+            </div>
+
+            <div class="question">
+                <p>2. What type of place would you rather live in?</p>
+                <label><input type="radio" name="q2" value="1"> A. A quiet cottage in the woods</label><br>
+                <label><input type="radio" name="q2" value="2"> B. An artsy studio in the city</label><br>
+                <label><input type="radio" name="q2" value="3"> C. A cozy suburban home</label><br>
+                <label><input type="radio" name="q2" value="4"> D. A beach house with ocean views</label>
+            </div>
+			
+			<div class="question">
+				<p>3. Which sounds like the most fun?</p>
+				<label><input type="radio" name="q3" value="1"> A. Writing in a journal</label><br>
+				<label><input type="radio" name="q3" value="2"> B. Painting or drawing</label><br>
+				<label><input type="radio" name="q3" value="3"> C. Watching a concert</label><br>
+				<label><input type="radio" name="q3" value="4"> D. Going on a road trip</label><br><br>
+			</div>
+            <!-- Add more questions here following the same format -->
+			
+					<!-- Question 4 -->
+			<div class="question">
+				<p>4. Which of these sounds most appealing?</p>
+				<label><input type="radio" name="q4" value="1"> A. quiet cabin in the woods</label><br>
+				<label><input type="radio" name="q4" value="2"> B. mountain lodge</label><br>
+				<label><input type="radio" name="q4" value="3"> C. A cozy cottage</label><br>
+				<label><input type="radio" name="q4" value="4"> D. A beachside resort</label><br><br>
+			</div>	
+				<!-- Question 5 -->
+			<div class="question">
+				 <p>5. What is your favourite genre of music?</p>
+				<label><input type="radio" name="q5" value="1"> A. Classical or jazz</label><br>
+				<label><input type="radio" name="q5" value="2"> B. Pop or rock</label><br>
+				<label><input type="radio" name="q5" value="3"> C. Indie or alternative</label><br>
+				<label><input type="radio" name="q5" value="4"> D. Top hits</label><br><br>
+			</div>	
+				<!-- Question 6 -->
+			<div class="question">
+				 <p>6. How do you usually handle conflict?</p>
+				<label><input type="radio" name="q6" value="1"> A. Reflect before reacting</label><br>
+				<label><input type="radio" name="q6" value="2"> B. Stand up for yourself</label><br>
+				<label><input type="radio" name="q6" value="3"> C. Talk it out</label><br>
+				<label><input type="radio" name="q6" value="4"> D. Keep the peace</label><br><br>
+			</div>	
+				<!-- Question 7 -->
+			<div class="question">
+				 <p>7. What's your dream vacation?</p>
+				<label><input type="radio" name="q7" value="1"> A. A relaxing spa retreat</label><br>
+				<label><input type="radio" name="q7" value="2"> B. An adventurous trip</label><br>
+				<label><input type="radio" name="q7" value="3"> C. A cultural exploration</label><br>
+				<label><input type="radio" name="q7" value="4"> D. A luxury resort</label><br><br>
+			</div>	
+				<!-- Question 8 -->
+			<div class="question">
+				 <p>8. Which of these would you most likely do on a free day?</p>
+				<label><input type="radio" name="q8" value="1"> A. Read or meditate</label><br>
+				<label><input type="radio" name="q8" value="2"> B. Go for a run</label><br>
+				<label><input type="radio" name="q8" value="3"> C. Try a DIY project</label><br>
+				<label><input type="radio" name="q8" value="4"> D. Go shopping</label><br><br>
+			</div>	
+				<!-- Question 9 -->
+			<div class="question">
+				 <p>9. What kind of movies do you enjoy?</p>
+				<label><input type="radio" name="q9" value="1"> A. Documentaries or dramas</label><br>
+				<label><input type="radio" name="q9" value="2"> B. Action-packed thrillers</label><br>
+				<label><input type="radio" name="q9" value="3"> C. Indie or quirky films</label><br>
+				<label><input type="radio" name="q9" value="4"> D. Comedies</label><br><br>
+			</div>	
+				<!-- Question 10 -->
+			<div class="question">
+				 <p>10. How do you feel about social gatherings?</p>
+				<label><input type="radio" name="q10" value="1"> A. I prefer smaller, intimate gatherings</label><br>
+				<label><input type="radio" name="q10" value="2"> B. I enjoy larger events</label><br>
+				<label><input type="radio" name="q10" value="3"> C. I like hosting and organizing</label><br>
+				<label><input type="radio" name="q10" value="4"> D. I’m neutral</label><br><br>
+			</div>	
+				<!-- Question 11 -->
+			<div class="question">
+				 <p>11. What's your preferred form of exercise?</p>
+				<label><input type="radio" name="q11" value="1"> A. Yoga or Pilates</label><br>
+				<label><input type="radio" name="q11" value="2"> B. High-intensity workouts</label><br>
+				<label><input type="radio" name="q11" value="3"> C. Dancing or something creative</label><br>
+				<label><input type="radio" name="q11" value="4"> D. Walking or light exercise</label><br><br>
+			</div>	
+				<!-- Question 12 -->
+			<div class="question">
+				 <p>12. Which of these hobbies sounds most appealing?</p>
+				<label><input type="radio" name="q12" value="1"> A. Reading or painting</label><br>
+				<label><input type="radio" name="q12" value="2"> B. Sports or adventure</label><br>
+				<label><input type="radio" name="q12" value="3"> C. Cooking or crafting</label><br>
+				<label><input type="radio" name="q12" value="4"> D. Watching a series</label><br><br>
+			</div>	
+				<!-- Question 13 -->
+			<div class="question">
+				 <p>13. How do you deal with stress?</p>
+				<label><input type="radio" name="q13" value="1"> A. Meditate or journal</label><br>
+				<label><input type="radio" name="q13" value="2"> B. Exercise</label><br>
+				<label><input type="radio" name="q13" value="3"> C. Talk to a friend</label><br>
+				<label><input type="radio" name="q13" value="4"> D. Watch TV</label><br><br>
+			</div>	
+				<!-- Question 14 -->
+			<div class="question">
+				 <p>14. What's your ideal pet?</p>
+				<label><input type="radio" name="q14" value="1"> A. A calm cat</label><br>
+				<label><input type="radio" name="q14" value="2"> B. An active dog</label><br>
+				<label><input type="radio" name="q14" value="3"> C. A quirky bird</label><br>
+				<label><input type="radio" name="q14" value="4"> D. No pets, but love visiting zoos</label><br><br>
+			</div>	
+				<!-- Question 15 -->
+			<div class="question">
+				 <p>15. How do you feel about change?</p>
+				<label><input type="radio" name="q15" value="1"> A. I’m cautious</label><br>
+				<label><input type="radio" name="q15" value="2"> B. I embrace it</label><br>
+				<label><input type="radio" name="q15" value="3"> C. I adjust gradually</label><br>
+				<label><input type="radio" name="q15" value="4"> D. I don’t mind</label><br><br>
+			</div>	
+				<!-- Question 16 -->
+			<div class="question">
+				 <p>16. What do you enjoy in your spare time?</p>
+				<label><input type="radio" name="q16" value="1"> A. Reading</label><br>
+				<label><input type="radio" name="q16" value="2"> B. Traveling</label><br>
+				<label><input type="radio" name="q16" value="3"> C. Cooking</label><br>
+				<label><input type="radio" name="q16" value="4"> D. Watching shows</label><br><br>
+			</div>	
+				<!-- Question 17 -->
+			<div class="question">
+				 <p>17. What kind of books do you like?</p>
+				<label><input type="radio" name="q17" value="1"> A. Classics or mysteries</label><br>
+				<label><input type="radio" name="q17" value="2"> B. Self-help or adventure</label><br>
+				<label><input type="radio" name="q17" value="3"> C. Biographies or non-fiction</label><br>
+				<label><input type="radio" name="q17" value="4"> D. Fiction</label><br><br>
+			</div>	
+				<!-- Question 18 -->
+			<div class="question">
+				 <p>18.	How do you spend your lunch break?</p>
+				<label><input type="radio" name="q18" value="1"> A. Reading a book</label><br>
+				<label><input type="radio" name="q18" value="2"> B. Going for a walk</label><br>
+				<label><input type="radio" name="q18" value="3"> C. Chatting with friends</label><br>
+				<label><input type="radio" name="q18" value="4"> D. Watching a video</label><br><br>
+			</div>	
+				<!-- Question 19 -->
+			<div class="question">
+				 <p>19.	How would you describe your ideal workspace?</p>
+				<label><input type="radio" name="q19" value="1"> A. Quiet and organized</label><br>
+				<label><input type="radio" name="q19" value="2"> B. Dynamic and engaging</label><br>
+				<label><input type="radio" name="q19" value="3"> C. Personalized with photos</label><br>
+				<label><input type="radio" name="q19" value="4"> D. Simple and functional</label><br><br>
+			</div>	
+				<!-- Question 20 -->
+			<div class="question">
+				 <p>20.	What kind of games do you prefer</p>
+				<label><input type="radio" name="q20" value="1"> A. Puzzles or strategy games</label><br>
+				<label><input type="radio" name="q20" value="2"> B. Sports games</label><br>
+				<label><input type="radio" name="q20" value="3"> C. Party games</label><br>
+				<label><input type="radio" name="q20" value="4"> D. Casual games</label><br><br>
+			</div>
+            <!-- Navigation Buttons -->
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="button" onclick="prevQuestion()" id="prevBtn" style="display: none;">Previous</button>
+                <button type="button" onclick="nextQuestion()" id="nextBtn">Next</button>
+                <button type="button" onclick="calculateResult()" id="submitBtn" style="display: none;">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let currentQuestion = 0;
+        const questions = document.querySelectorAll('.question');
+
+        // Show the first question
+        questions[currentQuestion].style.display = 'block';
+
+        function showQuestion(index) {
+            questions.forEach((q, i) => q.style.display = i === index ? 'block' : 'none');
+            
+            // Update button visibility
+            document.getElementById('prevBtn').style.display = index === 0 ? 'none' : 'inline-block';
+            document.getElementById('nextBtn').style.display = index === questions.length - 1 ? 'none' : 'inline-block';
+            document.getElementById('submitBtn').style.display = index === questions.length - 1 ? 'inline-block' : 'none';
+        }
+
+        function nextQuestion() {
+            // Ensure an answer is selected
+            if (document.querySelector(`input[name="q${currentQuestion + 1}"]:checked`)) {
+                currentQuestion++;
+                showQuestion(currentQuestion);
+            } else {
+                alert('Please select an answer before proceeding.');
+            }
+        }
+
+        function prevQuestion() {
+            currentQuestion--;
+            showQuestion(currentQuestion);
+        }
+
+        function calculateResult() {
+            let totalPoints = 0;
+            let unanswered = false;
+
+            questions.forEach((q, i) => {
+                let answer = document.querySelector(`input[name="q${i + 1}"]:checked`);
+                if (answer) {
+                    totalPoints += parseInt(answer.value);
+                } else {
+                    unanswered = true;
+                }
+            });
+
+            if (unanswered) {
+                alert("Please answer all questions.");
+                return;
+            }
+
+            let resultText;
+            if (totalPoints <= 29) {
+                resultText = "You’re a Quiet Contemplator!";
+            } else if (totalPoints <= 49) {
+                resultText = "You’re a Creative Thinker!";
+            } else if (totalPoints <= 69) {
+                resultText = "You’re a Balanced Explorer!";
+            } else {
+                resultText = "You’re an Adventurous Spirit!";
+            }
+
+            alert(resultText);
+        }
+    </script>
+</body>
+</html>
